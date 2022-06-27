@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Headroom from "svelte-headroom";
   import LinkedIn from "./icons/LinkedIn.svelte";
   import GitHub from "./icons/GitHub.svelte";
 
@@ -10,6 +11,9 @@
 
   let ready = false;
   onMount(() => (ready = true));
+
+  let isPinned = true;
+  let scrollY = 0;
 
   $: introductionDelay = transitionDelay;
   $: aboutMeDelay = introductionDelay + 100;
@@ -33,87 +37,96 @@
   }
 </script>
 
-<header>
-  {#if ready}
-    <nav class="page-nav">
-      <ul>
-        <li
-          in:fly={{
-            y: -50,
-            duration: 500,
-            easing: cubicInOut,
-            delay: introductionDelay,
-          }}
-        >
-          <a href="#introduction" on:click|preventDefault={scrollToTop}>DK</a>
-        </li>
-        <li
-          in:fly={{
-            y: -50,
-            duration: 500,
-            easing: cubicInOut,
-            delay: aboutMeDelay,
-          }}
-        >
-          <a href="#about-me" on:click|preventDefault={scrollIntoView}
-            >About Me</a
+<svelte:window bind:scrollY />
+
+<Headroom
+  on:pin={() => (isPinned = true)}
+  on:unpin={() => (isPinned = false)}
+  duration="350ms"
+>
+  <header class:with-boxshadow={scrollY > 50 && isPinned}>
+    {#if ready}
+      <nav class="page-nav">
+        <ul>
+          <li
+            in:fly={{
+              y: -50,
+              duration: 500,
+              easing: cubicInOut,
+              delay: introductionDelay,
+            }}
           >
-        </li>
-        <li
-          in:fly={{
-            y: -50,
-            duration: 500,
-            easing: cubicInOut,
-            delay: experienceDelay,
-          }}
-        >
-          <a href="#experience" on:click|preventDefault={scrollIntoView}
-            >Experience</a
+            <a href="#introduction" on:click|preventDefault={scrollToTop}>DK</a>
+          </li>
+          <li
+            in:fly={{
+              y: -50,
+              duration: 500,
+              easing: cubicInOut,
+              delay: aboutMeDelay,
+            }}
           >
-        </li>
-        <li
-          in:fly={{
-            y: -50,
-            duration: 500,
-            easing: cubicInOut,
-            delay: contactDelay,
-          }}
-        >
-          <a href="#contact" on:click|preventDefault={scrollIntoView}>Contact</a
+            <a href="#about-me" on:click|preventDefault={scrollIntoView}
+              >About Me</a
+            >
+          </li>
+          <li
+            in:fly={{
+              y: -50,
+              duration: 500,
+              easing: cubicInOut,
+              delay: experienceDelay,
+            }}
           >
-        </li>
-      </ul>
-    </nav>
-    <nav class="icons">
-      <ul>
-        <li
-          in:fly={{
-            y: -50,
-            duration: 500,
-            easing: cubicInOut,
-            delay: linkedInDelay,
-          }}
-        >
-          <a href="https://www.linkedin.com/in/denniskievits/">
-            <LinkedIn class="icon" />
-          </a>
-        </li>
-        <li
-          in:fly={{
-            y: -50,
-            duration: 500,
-            easing: cubicInOut,
-            delay: gitHubDelay,
-          }}
-        >
-          <a href="https://www.github.com/elertan/">
-            <GitHub class="icon" />
-          </a>
-        </li>
-      </ul>
-    </nav>
-  {/if}
-</header>
+            <a href="#experience" on:click|preventDefault={scrollIntoView}
+              >Experience</a
+            >
+          </li>
+          <li
+            in:fly={{
+              y: -50,
+              duration: 500,
+              easing: cubicInOut,
+              delay: contactDelay,
+            }}
+          >
+            <a href="#contact" on:click|preventDefault={scrollIntoView}
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="icons">
+        <ul>
+          <li
+            in:fly={{
+              y: -50,
+              duration: 500,
+              easing: cubicInOut,
+              delay: linkedInDelay,
+            }}
+          >
+            <a href="https://www.linkedin.com/in/denniskievits/">
+              <LinkedIn class="icon" />
+            </a>
+          </li>
+          <li
+            in:fly={{
+              y: -50,
+              duration: 500,
+              easing: cubicInOut,
+              delay: gitHubDelay,
+            }}
+          >
+            <a href="https://www.github.com/elertan/">
+              <GitHub class="icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    {/if}
+  </header>
+</Headroom>
 
 <style lang="scss">
   header {
@@ -121,10 +134,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    background-color: var(--color-bg);
+  }
+
+  .with-boxshadow {
+    box-shadow: 0 10px 30px -10px rgba(2, 10, 22, 0.7);
   }
 
   ul {

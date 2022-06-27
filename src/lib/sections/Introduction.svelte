@@ -59,8 +59,8 @@
             }}
           >
             I'm a Software Architect specializing in designing and building
-            efficient software, without ever sacrificing the focus on an
-            exceptional user experience.
+            efficient software, that also keeps focus on an exceptional user
+            experience.
           </p>
           <p
             class="intro-2"
