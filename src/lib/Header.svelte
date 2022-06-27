@@ -42,6 +42,7 @@
 <Headroom
   on:pin={() => (isPinned = true)}
   on:unpin={() => (isPinned = false)}
+  offset={50}
   duration="350ms"
 >
   <header class:with-boxshadow={scrollY > 50 && isPinned}>
