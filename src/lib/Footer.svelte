@@ -2,15 +2,15 @@
 </script>
 
 <footer>
-    <h2>Footer</h2>
+    <p>Copyright &copy; {new Date().getFullYear()} Dennis Kievits</p>
 </footer>
 
 <style lang="scss">
   footer {
-    background-color: #f5f5f5;
+    background-color: var(--color-dark);
     padding: 20px;
     text-align: center;
     font-size: 0.8em;
-    color: #777;
+    color: var(--color-text-muted-dark);
   }
 </style>

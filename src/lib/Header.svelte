@@ -16,7 +16,7 @@
         <ul>
             <li><a href="#about-me" on:click|preventDefault={scrollIntoView}>About me</a></li>
             <li><a href="#experience" on:click|preventDefault={scrollIntoView}>Experience</a></li>
-            <li><a href="#get-in-touch" on:click|preventDefault={scrollIntoView}>Get In Touch</a></li>
+            <li><a href="#contact" on:click|preventDefault={scrollIntoView}>Contact</a></li>
         </ul>
     </nav>
     <nav class="socials">
@@ -49,10 +49,10 @@
   }
 
   .page-nav > ul {
-    column-gap: 20px;
+    column-gap: 30px;
   }
 
   .socials > ul {
-    column-gap: 15px;
+    column-gap: 20px;
   }
 </style>

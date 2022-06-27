@@ -5,19 +5,21 @@
 </script>
 
 <div class="root">
-    <Section id="experience" class="section">
+    <Section id="contact" class="section">
         <Container>
-            <SectionTitle>Experience</SectionTitle>
+            <SectionTitle>Contact</SectionTitle>
         </Container>
     </Section>
 </div>
 
 <style lang="scss">
   .root :global(.section) {
-    background-color: var(--color-dark);
+    background-color: var(--color-light-grey);
   }
 
-  .root {
-    color: var(--color-light);
+  p {
+    margin-top: calc(1 * var(--spacing-unit));
+    color: var(--color-text-muted);
+    font-size: var(--font-size);
   }
 </style>
