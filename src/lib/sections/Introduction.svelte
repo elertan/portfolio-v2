@@ -7,14 +7,14 @@
 
     export let transitionDelay: number = 0;
 
-    $: preDelay = transitionDelay;
-    $: nameDelay = preDelay + 500;
-    $: headlineDelay = nameDelay + 1250;
-    $: introDelay = headlineDelay + 1000;
-    $: intro2Delay = introDelay + 750;
-
     let ready = false;
     onMount(() => ready = true);
+
+    $: preDelay = transitionDelay;
+    $: nameDelay = preDelay + 500;
+    $: headlineDelay = nameDelay + 1000;
+    $: introDelay = headlineDelay + 750;
+    $: intro2Delay = introDelay + 750;
 </script>
 
 <div class="root">

@@ -14,7 +14,7 @@
 <Header/>
 
 <main>
-    <Introduction/>
+    <Introduction transitionDelay={1100} />
     <AboutMe/>
     <Experience/>
     <Contact/>
