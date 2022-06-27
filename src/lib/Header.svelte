@@ -40,7 +40,7 @@
 
 <style lang="scss">
   header {
-    padding: calc(1.5 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit));
+    padding: calc(1.25 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit));
     display: flex;
     justify-content: space-between;
     align-items: center;
