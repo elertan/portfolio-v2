@@ -1,18 +1,28 @@
 <script lang="ts">
+    import Header from "./lib/Header.svelte";
+    import AboutMe from "./lib/sections/AboutMe.svelte";
+    import Experience from "./lib/sections/Experience.svelte";
+    import GetInTouch from "./lib/sections/GetInTouch.svelte";
+    import Footer from "./lib/Footer.svelte";
 </script>
 
+<svelte:head>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+    </style>
+</svelte:head>
+
+<Header/>
+
 <main>
+    <AboutMe/>
+    <Experience/>
+    <GetInTouch/>
 </main>
 
-<style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+<Footer />
 
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
+<style lang="scss">
+  @import "assets/css/global.scss";
+
 </style>
