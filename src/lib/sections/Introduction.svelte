@@ -14,7 +14,7 @@
   let isDoneTypingName = false;
 
   $: preDelay = transitionDelay;
-  $: nameDelay = preDelay + 500;
+  $: nameDelay = preDelay + 300;
   $: headlineDelay = nameDelay + 2200;
   $: introDelay = headlineDelay + 750;
   $: intro2Delay = introDelay + 750;
@@ -38,7 +38,7 @@
           <h1
             class="name"
             class:is-writing-name={!isDoneTypingName}
-            in:fade={{ duration: 500, easing: cubicInOut, delay: nameDelay }}
+            in:fade={{ duration: 300, easing: cubicInOut, delay: nameDelay }}
           >
             <Typewriter
               delay={nameDelay + 500}
