@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-<!--    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 </svelte:head>
 
 <Header/>

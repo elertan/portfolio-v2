@@ -2,6 +2,12 @@
     import LinkedIn from "./icons/LinkedIn.svelte";
     import GitHub from "./icons/GitHub.svelte";
 
+    function scrollToTop() {
+        document.body.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
     function scrollIntoView({target}) {
         const el = document.querySelector(target.getAttribute('href'));
         if (!el) return;
@@ -14,6 +20,7 @@
 <header>
     <nav class="page-nav">
         <ul>
+            <li><a href="#introduction" on:click|preventDefault={scrollToTop}>DK</a></li>
             <li><a href="#about-me" on:click|preventDefault={scrollIntoView}>About Me</a></li>
             <li><a href="#experience" on:click|preventDefault={scrollIntoView}>Experience</a></li>
             <li><a href="#contact" on:click|preventDefault={scrollIntoView}>Contact</a></li>
@@ -47,10 +54,21 @@
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
+    li:first-of-type {
+      a {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: calc(1.6 * var(--font-size));
+        letter-spacing: 3px;
+      }
+    }
 
     li {
       a {
-        color: var(--color-text);
+        color: var(--color-secondary);
         text-decoration: none;
         font-weight: bold;
       }
@@ -68,6 +86,6 @@
   .icons :global(.icon) {
     width: 25px;
     height: 25px;
-    fill: var(--color-text);
+    fill: var(--color-secondary);
   }
 </style>

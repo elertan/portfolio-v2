@@ -11,12 +11,12 @@
                 <!--                <h1 class="name">Dennis Kievits</h1>-->
                 <!--                <p class="role">Software Engineer</p>-->
 
-                <p class="pre">Hey! I am</p>
+                <p class="pre">Hello, my name is</p>
                 <h1 class="name">Dennis Kievits.</h1>
                 <p class="headline">And technology is what drives me every day.</p>
-                <p class="intro">I'm a software engineer specializing in designing and building efficient software, without sacrificing the focus on
+                <p class="intro">I'm a Software Architect specializing in designing and building efficient software, without ever sacrificing the focus on
                     an exceptional user experience.</p>
-                <p class="intro-2">At the moment, I’m focused on building software solutions for my clients at Velachi.</p>
+                <p class="intro-2">At the moment, I’m focused on building software solutions for my clients at <a href="https://www.velachi.com">Velachi</a>.</p>
             </div>
         </Container>
     </Section>
@@ -48,16 +48,18 @@
     margin-top: calc(1 * var(--spacing-unit));
     font-size: calc(2.5 * var(--font-size));
     font-weight: bolder;
+    //color: var(--color-secondary);
   }
 
   .intro {
     margin-top: calc(2 * var(--spacing-unit));
-    font-size: calc(1 * var(--font-size));
+    font-size: calc(1.1 * var(--font-size));
     color: var(--color-text-muted);
   }
 
   .intro-2 {
-    font-size: calc(1 * var(--font-size));
+    margin-top: calc(.25 * var(--spacing-unit));
+    font-size: calc(1.1 * var(--font-size));
     color: var(--color-text-muted);
   }
 </style>

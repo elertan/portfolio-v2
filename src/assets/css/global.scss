@@ -57,3 +57,8 @@ q:before, q:after) {
 :global(p) {
   line-height: 28px;
 }
+
+:global(a) {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
