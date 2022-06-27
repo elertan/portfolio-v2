@@ -1,8 +1,8 @@
 <script lang="ts"></script>
 
 <section id="about-me">
-    <h1>Support every learner in your classroom</h1>
-    <p class="text-muted">Lorem ipsum</p>
+    <h1>Dennis Kievits</h1>
+    <p class="text-muted">Software Engineer</p>
 </section>
 
 <style lang="scss">

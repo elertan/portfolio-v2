@@ -7,9 +7,7 @@
 </script>
 
 <svelte:head>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </svelte:head>
 
 <Header/>

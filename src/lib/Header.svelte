@@ -1,4 +1,7 @@
 <script lang="ts">
+    import LinkedIn from "./icons/LinkedIn.svelte";
+    import GitHub from "./icons/GitHub.svelte";
+
     function scrollIntoView({ target }) {
         const el = document.querySelector(target.getAttribute('href'));
         if (!el) return;
@@ -18,8 +21,8 @@
     </nav>
     <nav class="socials">
         <ul>
-            <li><a href="https://www.linkedin.com/in/denniskievits/">LinkedIn</a></li>
-            <li><a href="https://www.github.com/elertan/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/denniskievits/"><LinkedIn width="20px" height="20px" /></a></li>
+            <li><a href="https://www.github.com/elertan/"><GitHub width="20px" height="20px" /></a></li>
         </ul>
     </nav>
 </header>
@@ -50,6 +53,6 @@
   }
 
   .socials > ul {
-    column-gap: 10px;
+    column-gap: 15px;
   }
 </style>
