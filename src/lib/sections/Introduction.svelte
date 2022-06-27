@@ -5,6 +5,14 @@
     import {onMount} from "svelte";
     import {cubicInOut} from "svelte/easing";
 
+    export let transitionDelay: number = 0;
+
+    $: preDelay = transitionDelay;
+    $: nameDelay = preDelay + 500;
+    $: headlineDelay = nameDelay + 1250;
+    $: introDelay = headlineDelay + 1000;
+    $: intro2Delay = introDelay + 750;
+
     let ready = false;
     onMount(() => ready = true);
 </script>
@@ -14,16 +22,19 @@
         <Container>
             {#if ready}
                 <div class="container">
-                    <p class="pre" in:fade="{{ y: -100, duration: 500, easing: cubicInOut }}">Hello, my name is</p>
-                    <h1 class="name" in:fade="{{ duration: 500, easing: cubicInOut, delay: 600 }}">Dennis
+                    <p class="pre" in:fade="{{ y: -100, duration: 500, easing: cubicInOut, delay: preDelay }}">Hello, my
+                        name is</p>
+                    <h1 class="name" in:fade="{{ duration: 500, easing: cubicInOut, delay: nameDelay }}">Dennis
                         Kievits.</h1>
-                    <p class="headline" in:fade="{{ duration: 500, easing: cubicInOut, delay: 1500 }}">And
+                    <p class="headline" in:fade="{{ duration: 500, easing: cubicInOut, delay: headlineDelay }}">And
                         technology is what interests me.</p>
-                    <p class="intro" in:fly="{{ y: 50, duration: 500, easing: cubicInOut, delay: 2500 }}">I'm a Software
+                    <p class="intro" in:fly="{{ y: 50, duration: 500, easing: cubicInOut, delay: introDelay }}">I'm a
+                        Software
                         Architect specializing in designing and building efficient software,
                         without ever sacrificing the focus on
                         an exceptional user experience.</p>
-                    <p class="intro-2" in:fly="{{ y: 50, duration: 500, easing: cubicInOut, delay: 3250 }}">At the
+                    <p class="intro-2" in:fly="{{ y: 50, duration: 500, easing: cubicInOut, delay: intro2Delay }}">At
+                        the
                         moment, I’m focused on building software solutions for my clients at <a
                                 href="https://www.velachi.com">Velachi</a>.</p>
                 </div>
