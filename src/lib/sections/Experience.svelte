@@ -1,15 +1,15 @@
 <script lang="ts">
-    import Container from "../components/Container.svelte";
-    import SectionTitle from "../components/SectionTitle.svelte";
-    import Section from "../components/Section.svelte";
+  import Container from "../components/Container.svelte";
+  import SectionTitle from "../components/SectionTitle.svelte";
+  import Section from "../components/Section.svelte";
 </script>
 
 <div class="root">
-    <Section id="experience" class="section">
-        <Container>
-            <SectionTitle>Experience</SectionTitle>
-        </Container>
-    </Section>
+  <Section id="experience" class="section">
+    <Container>
+      <SectionTitle>Experience</SectionTitle>
+    </Container>
+  </Section>
 </div>
 
 <style lang="scss">

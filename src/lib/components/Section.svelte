@@ -1,5 +1,5 @@
 <section {...$$props}>
-    <slot/>
+  <slot />
 </section>
 
 <style lang="scss">

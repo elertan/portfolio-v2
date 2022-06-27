@@ -2,7 +2,7 @@
 </script>
 
 <footer>
-    <p>Copyright &copy; {new Date().getFullYear()} Dennis Kievits</p>
+  <p>Copyright &copy; {new Date().getFullYear()} Dennis Kievits</p>
 </footer>
 
 <style lang="scss">
