@@ -1,6 +1,7 @@
 <script lang="ts">
   import Container from "../components/Container.svelte";
   import Section from "../components/Section.svelte";
+  import Typewriter from "svelte-typewriter";
   import { fly, fade } from "svelte/transition";
   import { onMount } from "svelte";
   import { cubicInOut } from "svelte/easing";
@@ -10,9 +11,11 @@
   let ready = false;
   onMount(() => (ready = true));
 
+  let isDoneTypingName = false;
+
   $: preDelay = transitionDelay;
   $: nameDelay = preDelay + 500;
-  $: headlineDelay = nameDelay + 1000;
+  $: headlineDelay = nameDelay + 2200;
   $: introDelay = headlineDelay + 750;
   $: intro2Delay = introDelay + 750;
 </script>
@@ -25,7 +28,6 @@
           <p
             class="pre"
             in:fade={{
-              y: -100,
               duration: 500,
               easing: cubicInOut,
               delay: preDelay,
@@ -35,12 +37,20 @@
           </p>
           <h1
             class="name"
+            class:is-writing-name={!isDoneTypingName}
             in:fade={{ duration: 500, easing: cubicInOut, delay: nameDelay }}
           >
-            Dennis Kievits.
+            <Typewriter
+              delay={nameDelay + 500}
+              interval={[70, 110, 80]}
+              cascade
+              on:done={() => (isDoneTypingName = true)}
+              >Dennis Kievits.
+            </Typewriter>
           </h1>
           <p
             class="headline"
+            class:is-writing-name={!isDoneTypingName}
             in:fade={{
               duration: 500,
               easing: cubicInOut,
@@ -81,6 +91,10 @@
 </div>
 
 <style lang="scss">
+  :root {
+    --cursor-color: var(--color-primary);
+  }
+
   .root {
     height: 100vh;
     display: flex;
@@ -94,19 +108,27 @@
   .pre {
     font-size: calc(1 * var(--font-size));
     color: var(--color-text-muted);
+
+    height: 60px;
   }
 
   .name {
     font-size: calc(4.25 * var(--font-size));
     font-weight: bolder;
     color: var(--color-primary);
+
+    height: 60px;
+
+    &.is-writing-name {
+      position: relative;
+      top: -39px;
+    }
   }
 
   .headline {
     margin-top: calc(1 * var(--spacing-unit));
     font-size: calc(2.75 * var(--font-size));
     font-weight: bolder;
-    //color: var(--color-secondary);
   }
 
   .intro {
