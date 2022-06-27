@@ -2,7 +2,7 @@
     import LinkedIn from "./icons/LinkedIn.svelte";
     import GitHub from "./icons/GitHub.svelte";
 
-    function scrollIntoView({ target }) {
+    function scrollIntoView({target}) {
         const el = document.querySelector(target.getAttribute('href'));
         if (!el) return;
         el.scrollIntoView({
@@ -14,24 +14,33 @@
 <header>
     <nav class="page-nav">
         <ul>
-            <li><a href="#about-me" on:click|preventDefault={scrollIntoView}>About me</a></li>
+            <li><a href="#about-me" on:click|preventDefault={scrollIntoView}>About Me</a></li>
             <li><a href="#experience" on:click|preventDefault={scrollIntoView}>Experience</a></li>
             <li><a href="#contact" on:click|preventDefault={scrollIntoView}>Contact</a></li>
         </ul>
     </nav>
-    <nav class="socials">
+    <nav class="icons">
         <ul>
-            <li><a href="https://www.linkedin.com/in/denniskievits/"><LinkedIn width="20px" height="20px" /></a></li>
-            <li><a href="https://www.github.com/elertan/"><GitHub width="20px" height="20px" /></a></li>
+            <li><a href="https://www.linkedin.com/in/denniskievits/">
+                <LinkedIn class="icon" />
+            </a></li>
+            <li><a href="https://www.github.com/elertan/">
+                <GitHub class="icon" />
+            </a></li>
         </ul>
     </nav>
 </header>
 
 <style lang="scss">
   header {
-    padding: 2rem 2.5rem;
+    padding: calc(1.5 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit));
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   ul {
@@ -41,7 +50,7 @@
 
     li {
       a {
-        color: #000;
+        color: var(--color-text);
         text-decoration: none;
         font-weight: bold;
       }
@@ -49,10 +58,16 @@
   }
 
   .page-nav > ul {
+    column-gap: calc(2 * var(--spacing-unit));
+  }
+
+  .icons > ul {
     column-gap: 30px;
   }
 
-  .socials > ul {
-    column-gap: 20px;
+  .icons :global(.icon) {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-text);
   }
 </style>

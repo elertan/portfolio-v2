@@ -14,12 +14,12 @@
 
 <style lang="scss">
   .root :global(.section) {
-    background-color: var(--color-light-grey);
+    //background-color: var(--color-light-grey);
   }
 
   p {
     margin-top: calc(1 * var(--spacing-unit));
-    color: var(--color-text-muted);
+    //color: var(--color-text-muted);
     font-size: var(--font-size);
   }
 </style>

@@ -1,12 +1,21 @@
 :root {
+  --font-sans: 'Eina 01', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SFMono-Regular', 'Menlo', 'Roboto Mono', 'Consolas', 'Liberation Mono', monospace;
+
+  --color-primary: #55ffb7;
+  --color-secondary: #fafafa;
+
+  --color-bg: #252528;
+  --color-text: rgb(234, 234, 234);
+
   --color-light: #fff;
   --color-dark: #252528;
   --color-light-grey: #f4f4f4;
 
-  --color-text-muted: rgba(25,25,28,.7);
-  --color-text-muted-dark: hsla(0,0%,100%,.7);
+  --color-text-muted-dark: rgba(25,25,28,.7);
+  --color-text-muted: hsla(0,0%,100%,.7);
 
-  --font-size: 19px;
+  --font-size: 18px;
 
   --spacing-unit: 24px;
 }

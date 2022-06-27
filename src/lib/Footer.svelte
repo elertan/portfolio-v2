@@ -7,10 +7,9 @@
 
 <style lang="scss">
   footer {
-    background-color: var(--color-dark);
     padding: 20px;
     text-align: center;
     font-size: 0.8em;
-    color: var(--color-text-muted-dark);
+    //color: var(--color-text-muted);
   }
 </style>
