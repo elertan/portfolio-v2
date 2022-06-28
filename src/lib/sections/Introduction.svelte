@@ -5,20 +5,40 @@
   import { fly, fade } from "svelte/transition";
   import { onMount } from "svelte";
   import { cubicInOut } from "svelte/easing";
+  import ScrollDownIndicator from "../components/ScrollDownIndicator.svelte";
 
   export let transitionDelay: number = 0;
 
   let ready = false;
-  onMount(() => (ready = true));
 
   let isDoneTypingName = false;
+  let isDoneAnimating = false;
+
+  let documentScrollY = 0;
+  let hideScrollDownIndicator = false;
 
   $: preDelay = transitionDelay;
   $: nameDelay = preDelay + 300;
   $: headlineDelay = nameDelay + 2200;
   $: introDelay = headlineDelay + 750;
   $: intro2Delay = introDelay + 750;
+
+  function handleAnimatingFinished() {
+    isDoneAnimating = true;
+  }
+
+  onMount(() => {
+    setTimeout(handleAnimatingFinished, intro2Delay + 2000);
+
+    ready = true;
+  });
+
+  $: if (documentScrollY >= 50) {
+    hideScrollDownIndicator = true;
+  }
 </script>
+
+<svelte:window bind:scrollY={documentScrollY} />
 
 <div class="root">
   <Section id="introduction">
@@ -84,6 +104,22 @@
             At the moment, I’m focused on building software solutions for my
             clients at <a href="https://www.velachi.com">Velachi</a>.
           </p>
+
+          {#if isDoneAnimating && documentScrollY < 50 && !hideScrollDownIndicator}
+            <div
+              class="scroll-down-indicator"
+              in:fade={{
+                duration: 1500,
+                easing: cubicInOut,
+              }}
+              out:fade={{
+                duration: 300,
+                easing: cubicInOut,
+              }}
+            >
+              <ScrollDownIndicator />
+            </div>
+          {/if}
         </div>
       {/if}
     </Container>
@@ -141,5 +177,14 @@
     margin-top: calc(0.3 * var(--spacing-unit));
     font-size: calc(1.1 * var(--font-size));
     color: var(--color-text-muted);
+  }
+
+  .scroll-down-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
   }
 </style>
