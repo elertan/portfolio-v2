@@ -2,14 +2,15 @@
 </script>
 
 <footer>
-  <p>Copyright &copy; {new Date().getFullYear()} Dennis Kievits</p>
+  <p>Hand crafted using Svelte</p>
+  <p>Copyright &copy; {new Date().getFullYear()} &ndash; Dennis Kievits</p>
 </footer>
 
 <style lang="scss">
   footer {
-    padding: 20px;
+    padding: calc(1.5 * var(--spacing-unit));
     text-align: center;
-    font-size: 0.8em;
+    font-size: calc(0.75 * var(--font-size));
     //color: var(--color-text-muted);
   }
 </style>

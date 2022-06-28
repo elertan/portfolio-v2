@@ -65,7 +65,8 @@
               interval={[70, 110, 80]}
               cascade
               on:done={() => (isDoneTypingName = true)}
-              >Dennis Kievits.
+            >
+              Dennis Kievits
             </Typewriter>
           </h1>
           <p
@@ -88,8 +89,8 @@
               delay: introDelay,
             }}
           >
-            I'm a Software Architect that focuses on technical design and
-            building efficient software; all without compromising on an
+            I'm a freelance Software Architect that focuses on technical design
+            and building efficient software; all without compromising on an
             excellent end-user experience.
           </p>
           <p
