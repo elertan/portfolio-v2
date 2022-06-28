@@ -88,9 +88,9 @@
               delay: introDelay,
             }}
           >
-            I'm a Software Architect specializing in designing and building
-            efficient software, that also keeps focus on an exceptional user
-            experience.
+            I'm a Software Architect that focuses on technical design and
+            building efficient software; all without compromising on a practical
+            end-user experience.
           </p>
           <p
             class="intro-2"
@@ -101,8 +101,9 @@
               delay: intro2Delay,
             }}
           >
-            At the moment, I’m focused on building software solutions for my
-            clients at <a href="https://www.velachi.com">Velachi</a>.
+            At the moment, I’m actively working on building software solutions
+            for clients at <a href="https://www.velachi.com">Velachi</a>, next
+            to being busy designing and developing the next big in-house apps.
           </p>
 
           {#if isDoneAnimating && documentScrollY < 50 && !hideScrollDownIndicator}
@@ -169,19 +170,21 @@
 
   .intro {
     margin-top: calc(2.5 * var(--spacing-unit));
-    font-size: calc(1.1 * var(--font-size));
+    font-size: calc(1 * var(--font-size));
     color: var(--color-text-muted);
+    max-width: calc(30 * var(--spacing-unit));
   }
 
   .intro-2 {
-    margin-top: calc(0.3 * var(--spacing-unit));
-    font-size: calc(1.1 * var(--font-size));
+    margin-top: calc(0.5 * var(--spacing-unit));
+    font-size: calc(1 * var(--font-size));
     color: var(--color-text-muted);
+    max-width: calc(30 * var(--spacing-unit));
   }
 
   .scroll-down-indicator {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 0;
     right: 0;
     display: flex;
