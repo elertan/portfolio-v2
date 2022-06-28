@@ -89,8 +89,8 @@
             }}
           >
             I'm a Software Architect that focuses on technical design and
-            building efficient software; all without compromising on a practical
-            end-user experience.
+            building efficient software; all without compromising on an
+            excellent end-user experience.
           </p>
           <p
             class="intro-2"
@@ -102,8 +102,8 @@
             }}
           >
             At the moment, I’m actively working on building software solutions
-            for clients at <a href="https://www.velachi.com">Velachi</a>, next
-            to being busy designing and developing the next big in-house apps.
+            for clients at <a href="https://www.velachi.com">Velachi</a>, whilst
+            also designing and developing the next generation in-house apps.
           </p>
 
           {#if isDoneAnimating && documentScrollY < 50 && !hideScrollDownIndicator}
