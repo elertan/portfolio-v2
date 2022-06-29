@@ -2,43 +2,52 @@
   import Container from "../components/Container.svelte";
   import SectionTitle from "../components/SectionTitle.svelte";
   import Section from "../components/Section.svelte";
+
+  import me from "../../assets/images/me2.png";
 </script>
 
 <div class="root">
   <Section id="about-me" class="section">
     <Container>
       <SectionTitle class="section-title">About Me</SectionTitle>
-      <p>
-        Hello! My name is Dennis Kievits and I love solving technical challenges
-        and seeing how the solutions to those challenges end up improving the
-        lives of others.
-      </p>
-      <p>
-        My interest in technology starts all the way back in my childhood. When
-        I was about eleven years old, I learned about macros that you could
-        create in Microsoft Office which allowed you to develop forms which I
-        used to embed and hide flash games out of the primary school teacher's
-        sight. &ndash;&ndash; Ever since then I have been fascinated about the
-        possibilities that software has to offer.
-      </p>
-      <p>
-        Fast-forward to today, and I've been able gather experience working on
-        many different projects ranging from mobile apps to large scale web
-        applications.
-      </p>
-      <p>Here are technologies that I love or have worked with recently:</p>
-      <div class="technologies-container">
-        <ul>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
+      <div class="layout">
+        <div>
+          <p>
+            Hello! My name is Dennis Kievits and I love solving technical
+            challenges and seeing how the solutions to those challenges end up
+            improving the lives of others.
+          </p>
+          <p>
+            My interest in technology starts all the way back in my childhood.
+            When I was about eleven years old, I learned about macros that you
+            could create in Microsoft Office which allowed you to develop forms
+            which I used to embed and hide flash games out of the primary school
+            teacher's sight. &ndash;&ndash; Ever since then I've been fascinated
+            about the possibilities that software has to offer.
+          </p>
+          <p>
+            Fast-forward to today, and I've been able gather experience working
+            on many different projects ranging from mobile apps to large scale
+            web applications.
+          </p>
+          <p>Here are technologies that I love or have worked with recently:</p>
+          <div class="technologies-container">
+            <ul>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+            </ul>
 
-        <ul>
-          <li>Rust</li>
-          <li>Flutter</li>
-          <li>.NET</li>
-        </ul>
+            <ul>
+              <li>Rust</li>
+              <li>Flutter</li>
+              <li>.NET</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img src={me} alt="Photo of Dennis Kievits" />
+        </div>
       </div>
     </Container>
   </Section>
@@ -47,10 +56,15 @@
 <style lang="scss">
   .root :global(.section) {
     background-color: var(--color-light);
+    padding-bottom: 0;
   }
 
   .root :global(.section-title) {
     color: var(--color-dark);
+  }
+
+  .layout {
+    display: flex;
   }
 
   p {
@@ -76,5 +90,14 @@
       content: "•";
       margin-right: calc(0.5 * var(--spacing-unit));
     }
+  }
+
+  img {
+    width: 450px;
+    //height: 600px;
+    position: relative;
+    top: 5px;
+    left: 80px;
+    margin-top: -50px;
   }
 </style>
