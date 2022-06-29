@@ -89,8 +89,8 @@
               delay: introDelay,
             }}
           >
-            I'm a freelance Software Architect that focuses on technical design
-            and building efficient software; all without compromising on an
+            I'm a freelance Software Engineer that focuses on software
+            architecture and efficiency; without compromising on creating an
             excellent end-user experience.
           </p>
           <p
@@ -102,9 +102,9 @@
               delay: intro2Delay,
             }}
           >
-            At the moment, I’m actively working on building software solutions
+            At the moment, I’m actively working on creating software solutions
             for clients at <a href="https://www.velachi.com">Velachi</a>, whilst
-            also designing and developing the next generation in-house apps.
+            also designing and developing the next generation of in-house apps.
           </p>
 
           {#if isDoneAnimating && documentScrollY < 50 && !hideScrollDownIndicator}
