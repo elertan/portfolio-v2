@@ -3,7 +3,7 @@
   import SectionTitle from "../components/SectionTitle.svelte";
   import Section from "../components/Section.svelte";
 
-  import me from "../../assets/images/me2.png";
+  import me from "../../assets/images/me2-grayscale2.png";
 </script>
 
 <div class="root">
@@ -93,7 +93,7 @@
   }
 
   img {
-    width: 450px;
+    width: 500px;
     //height: 600px;
     position: relative;
     top: 5px;
