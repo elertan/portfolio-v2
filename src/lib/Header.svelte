@@ -79,8 +79,8 @@
               delay: experienceDelay,
             }}
           >
-            <a href="#experience" on:click|preventDefault={scrollIntoView}
-              >Experience</a
+            <a href="#portfolio" on:click|preventDefault={scrollIntoView}
+              >Portfolio</a
             >
           </li>
           <li

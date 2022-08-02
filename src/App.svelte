@@ -2,7 +2,7 @@
   import Header from "./lib/Header.svelte";
   import Introduction from "./lib/sections/Introduction.svelte";
   import AboutMe from "./lib/sections/AboutMe.svelte";
-  import Experience from "./lib/sections/Experience.svelte";
+  import Portfolio from "./lib/sections/Portfolio.svelte";
   import Contact from "./lib/sections/Contact.svelte";
   import Footer from "./lib/Footer.svelte";
 </script>
@@ -16,7 +16,7 @@
 <main>
   <Introduction transitionDelay={1100} />
   <AboutMe />
-  <Experience />
+  <Portfolio />
   <Contact />
 </main>
 

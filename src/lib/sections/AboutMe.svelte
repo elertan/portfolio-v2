@@ -3,7 +3,8 @@
   import SectionTitle from "../components/SectionTitle.svelte";
   import Section from "../components/Section.svelte";
 
-  import me from "../../assets/images/me2-grayscale2.png";
+  import me from "../../assets/images/me.png";
+  import thesisSrc from "../../assets/documents/thesis.pdf";
 </script>
 
 <div class="root">
@@ -29,6 +30,17 @@
             Fast-forward to today, and I've been able gather experience working
             on many different projects ranging from mobile apps to large scale
             web applications.
+          </p>
+          <p>
+            As for a formal degree, I studied computer science at <a
+              href="https://www.hogeschoolrotterdam.nl/">Rotterdam University</a
+            >, and graduated Cum Laude with a 8.3 for the research upon
+            <a href={thesisSrc} class="thesis-link"
+              >"What effect does applying WebAssembly have on a compute
+              intensive client-side application versus JavaScript?"</a
+            >
+            &nbsp;supervised by
+            <a href="https://quintor.nl/">Quintor</a>.
           </p>
           <p>Here are technologies that I love or have worked with recently:</p>
           <div class="technologies-container">
@@ -73,6 +85,10 @@
     color: var(--color-text-muted);
 
     max-width: calc(30 * var(--spacing-unit));
+  }
+
+  .thesis-link {
+    font-style: italic;
   }
 
   .technologies-container {
