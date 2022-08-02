@@ -12,7 +12,7 @@
     <Container>
       <SectionTitle class="section-title">About Me</SectionTitle>
       <div class="layout">
-        <div>
+        <div class="content">
           <p>
             Hello! My name is Dennis Kievits and I love solving technical
             challenges and seeing how the solutions to those challenges end up
@@ -77,6 +77,11 @@
 
   .layout {
     display: flex;
+    align-items: end;
+  }
+
+  .content {
+    padding-bottom: calc(5 * var(--spacing-unit));
   }
 
   p {
