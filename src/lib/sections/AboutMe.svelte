@@ -77,7 +77,7 @@
 
   .layout {
     display: flex;
-    align-items: end;
+    //align-items: end;
   }
 
   .content {
@@ -114,7 +114,7 @@
   }
 
   img {
-    width: 500px;
+    width: 525px;
     //height: 600px;
     position: relative;
     top: 5px;
