@@ -1,11 +1,11 @@
 <script lang="ts">
-  import Headroom from "svelte-headroom";
   import LinkedIn from "./icons/LinkedIn.svelte";
   import GitHub from "./icons/GitHub.svelte";
 
-  import { fly, fade } from "svelte/transition";
+  import { fly } from "svelte/transition";
   import { onMount } from "svelte";
   import { cubicInOut } from "svelte/easing";
+  import Headroom from "./components/Headroom.svelte";
 
   export let transitionDelay: number = 0;
 
@@ -44,6 +44,7 @@
   on:unpin={() => (isPinned = false)}
   offset={50}
   duration="350ms"
+  clazz="headroom"
 >
   <header class:with-boxshadow={scrollY > 50 && isPinned}>
     {#if ready}
@@ -130,6 +131,10 @@
 </Headroom>
 
 <style lang="scss">
+  :global(.headroom) {
+    z-index: 1337;
+  }
+
   header {
     padding: calc(1.25 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit));
     display: flex;
