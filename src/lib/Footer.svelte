@@ -2,7 +2,7 @@
 </script>
 
 <footer>
-  <p>Hand crafted using Svelte</p>
+  <p>Handcrafted using Svelte.</p>
   <p>Copyright &copy; {new Date().getFullYear()} &ndash; Dennis Kievits</p>
 </footer>
 
