@@ -35,11 +35,7 @@
             <li>Financial management</li>
           </ul>
         </div>
-        <MacbookPreviewImage
-          width={600}
-          height={379}
-          previewSrc={aspSystemPreview}
-        />
+        <MacbookPreviewImage width={500} previewSrc={aspSystemPreview} />
       </div>
     </Container>
   </Section>

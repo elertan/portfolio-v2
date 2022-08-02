@@ -3,7 +3,7 @@
   import SectionTitle from "../components/SectionTitle.svelte";
   import Section from "../components/Section.svelte";
 
-  import me from "../../assets/images/me2.png";
+  import me from "../../assets/images/me2-grayscale2.png";
 </script>
 
 <div class="root">
@@ -55,12 +55,12 @@
 
 <style lang="scss">
   .root :global(.section) {
-    background-color: var(--color-light);
+    background-color: var(--color-dark);
     padding-bottom: 0;
   }
 
   .root :global(.section-title) {
-    color: var(--color-dark);
+    color: var(--color-light);
   }
 
   .layout {
@@ -70,7 +70,7 @@
   p {
     margin-top: calc(1 * var(--spacing-unit));
     font-size: var(--font-size);
-    color: var(--color-text-muted-dark);
+    color: var(--color-text-muted);
 
     max-width: calc(30 * var(--spacing-unit));
   }
@@ -82,7 +82,7 @@
 
     li {
       margin-bottom: calc(0.3 * var(--spacing-unit));
-      color: var(--color-text-muted-dark);
+      color: var(--color-text-muted);
       font-size: var(--font-size);
     }
 

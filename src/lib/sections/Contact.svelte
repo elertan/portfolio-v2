@@ -7,7 +7,7 @@
 <div class="root">
   <Section id="contact" class="section">
     <Container>
-      <SectionTitle>Contact</SectionTitle>
+      <SectionTitle class="section-title">Contact</SectionTitle>
     </Container>
   </Section>
 </div>
@@ -15,6 +15,10 @@
 <style lang="scss">
   .root :global(.section) {
     //background-color: var(--color-light-grey);
+  }
+
+  .root :global(.section-title) {
+    color: var(--color-light);
   }
 
   p {
