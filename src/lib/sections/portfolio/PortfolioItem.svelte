@@ -39,6 +39,10 @@
     font-size: calc(1.3 * var(--font-size));
   }
 
+  .right {
+    text-align: right;
+  }
+
   .root :global(p) {
     margin-top: calc(1 * var(--spacing-unit));
     font-size: var(--font-size);
