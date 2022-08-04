@@ -49,12 +49,14 @@
         </div>
       </PortfolioItem>
 
+      <div class="divider-space" />
+
       <PortfolioItem previewPosition={EPreviewPosition.Left}>
         <span slot="title">Fuif</span>
         <div slot="content">
           <p>
-            <a href="https://fuifapp.com">Fuif</a> is the best app for managing and
-            organizing parties, nightlife and festivals.
+            <a href="https://fuifapp.com">Fuif</a> is a powerful app for managing
+            and organizing parties, nightlife and festivals.
           </p>
           <p>
             The core philosophy of Fuif is in it's ease-of-use and the value it
@@ -83,8 +85,8 @@
             not have the native app installed.
           </p>
           <p>
-            The backend is being powered by a powerful GraphQL API written in
-            Rust that streams real-time updates right to the app.
+            The backend is being powered by a GraphQL API written in Rust that
+            streams real-time updates right to the app.
           </p>
         </div>
         <div slot="preview">
@@ -95,6 +97,11 @@
           </div>
         </div>
       </PortfolioItem>
+
+      <p class="other-projects">
+        I also have many other smaller projects that can be viewed directly on
+        my <a href="https://github.com/elertan">GitHub profile</a>.
+      </p>
     </Container>
   </Section>
 </div>
@@ -106,5 +113,14 @@
 
   .root {
     color: var(--color-dark);
+  }
+
+  .divider-space {
+    padding-top: calc(1 * var(--spacing-unit));
+  }
+
+  .other-projects {
+    margin-top: calc(3 * var(--spacing-unit));
+    text-align: center;
   }
 </style>

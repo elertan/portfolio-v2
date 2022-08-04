@@ -36,11 +36,8 @@
   }
 
   .root :global(.title) {
-    font-size: calc(1.3 * var(--font-size));
-  }
-
-  .right {
-    text-align: right;
+    font-size: calc(1.25 * var(--font-size));
+    margin-bottom: calc(0.5 * var(--spacing-unit));
   }
 
   .root :global(p) {
