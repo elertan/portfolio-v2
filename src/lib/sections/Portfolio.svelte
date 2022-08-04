@@ -40,7 +40,7 @@
             both front-end and back-end.
           </p>
           <p>
-            The main technologies used to build this application were React and
+            The main technologies used to built this application were React and
             Node.js, and all of the code was written in Typescript.
           </p>
         </div>

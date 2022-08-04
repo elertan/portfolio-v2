@@ -34,7 +34,7 @@
           <p>
             As for a formal degree, I studied computer science at <a
               href="https://www.hogeschoolrotterdam.nl/">Rotterdam University</a
-            >, and graduated Cum Laude with a 8.3 for the research upon
+            >, and graduated with a 8.3 for the research upon
             <a href={thesisSrc} class="thesis-link"
               >"What effect does applying WebAssembly have on a compute
               intensive client-side application versus JavaScript?"</a
