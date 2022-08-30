@@ -198,12 +198,20 @@
     //  line-height: 80px;
     //}
 
+    .root {
+      justify-content: inherit;
+    }
+
+    .container {
+      margin-top: 46px;
+    }
+
     .name {
       font-size: calc(2.5 * var(--font-size));
 
       &.is-writing-name {
         position: relative;
-        top: -23px;
+        top: -20px;
       }
     }
 
@@ -215,6 +223,10 @@
 
     .intro {
       margin-top: calc(1 * var(--spacing-unit));
+    }
+
+    .scroll-down-indicator {
+      display: none;
     }
   }
 </style>

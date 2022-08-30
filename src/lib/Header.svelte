@@ -6,6 +6,7 @@
   import { onMount } from "svelte";
   import { cubicInOut } from "svelte/easing";
   import Headroom from "./components/Headroom.svelte";
+  import Hamburger from "./icons/Hamburger.svelte";
 
   export let transitionDelay: number = 0;
 
@@ -49,6 +50,16 @@
   <header class:with-boxshadow={scrollY > 50 && isPinned}>
     {#if ready}
       <nav class="page-nav">
+        <div
+          class="hamburger-container"
+          in:fly={{
+            y: -50,
+            duration: 500,
+            easing: cubicInOut,
+          }}
+        >
+          <Hamburger width="30" height="30" fill="#fff" />
+        </div>
         <ul>
           <li
             in:fly={{
@@ -61,6 +72,7 @@
             <a href="#introduction" on:click|preventDefault={scrollToTop}>DK</a>
           </li>
           <li
+            class="bar-nav"
             in:fly={{
               y: -50,
               duration: 500,
@@ -73,6 +85,7 @@
             >
           </li>
           <li
+            class="bar-nav"
             in:fly={{
               y: -50,
               duration: 500,
@@ -85,6 +98,7 @@
             >
           </li>
           <li
+            class="bar-nav"
             in:fly={{
               y: -50,
               duration: 500,
@@ -143,6 +157,10 @@
     background-color: var(--color-bg);
   }
 
+  .hamburger-container {
+    display: none;
+  }
+
   .with-boxshadow {
     box-shadow: 0 10px 30px -10px rgba(2, 10, 22, 0.7);
   }
@@ -172,6 +190,11 @@
     }
   }
 
+  .page-nav {
+    display: flex;
+    align-items: center;
+  }
+
   .page-nav > ul {
     column-gap: calc(2 * var(--spacing-unit));
   }
@@ -184,5 +207,32 @@
     width: 25px;
     height: 25px;
     fill: var(--color-secondary);
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      padding: calc(1.25 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit))
+        calc(1.25 * var(--spacing-unit)) 30px;
+    }
+
+    .hamburger-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: 2px;
+    }
+
+    .page-nav > ul {
+      margin-left: 25px;
+    }
+
+    .bar-nav {
+      display: none;
+    }
+
+    .icons {
+      display: none;
+    }
   }
 </style>
