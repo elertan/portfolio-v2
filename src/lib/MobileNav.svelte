@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Hamburger from "./icons/Hamburger.svelte";
   import { createEventDispatcher } from "svelte";
   import LinkedIn from "./icons/LinkedIn.svelte";
   import GitHub from "./icons/GitHub.svelte";
+  import Cross from "./icons/Cross.svelte";
 
   const dispatch = createEventDispatcher();
 
@@ -31,7 +31,7 @@
 
 <nav class="root" class:open>
   <div on:click={handleCloseTap}>
-    <Hamburger width="30" height="30" fill="#fff" />
+    <Cross width="28" height="28" fill="#fff" />
   </div>
 
   <ul>
@@ -114,7 +114,7 @@
   }
 
   .root.open {
-    z-index: 1338;
+    z-index: 2674;
     opacity: 100%;
   }
 </style>
