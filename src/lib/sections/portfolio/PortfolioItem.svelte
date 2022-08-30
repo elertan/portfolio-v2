@@ -60,4 +60,11 @@
       margin-right: calc(0.5 * var(--spacing-unit));
     }
   }
+
+  // Phone and Tablet
+  @media screen and (max-width: 1250px) {
+    .container {
+      flex-direction: column;
+    }
+  }
 </style>

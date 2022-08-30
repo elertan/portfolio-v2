@@ -30,7 +30,7 @@
 </script>
 
 <nav class="root" class:open>
-  <div on:click={handleCloseTap}>
+  <div on:click={handleCloseTap} style="position: relative; left: -22px;">
     <Cross width="28" height="28" fill="#fff" />
   </div>
 
@@ -71,15 +71,15 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 100vw;
+    right: 0;
+    //width: 100vw;
     height: 100vh;
     opacity: 0;
     z-index: -1;
     display: flex;
     flex-direction: column;
 
-    padding: calc(1.25 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit))
-      calc(1.25 * var(--spacing-unit)) 30px;
+    padding: calc(1.25 * var(--spacing-unit)) calc(2.25 * var(--spacing-unit));
 
     background-color: var(--color-bg);
     transition: opacity 300ms ease-in-out, z-index 300ms ease-in-out;
@@ -107,14 +107,16 @@
     }
 
     .icons :global(.icon) {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       fill: var(--color-secondary);
     }
   }
 
-  .root.open {
-    z-index: 2674;
-    opacity: 100%;
+  @media screen and (max-width: 767px) {
+    .root.open {
+      z-index: 2674;
+      opacity: 100%;
+    }
   }
 </style>
