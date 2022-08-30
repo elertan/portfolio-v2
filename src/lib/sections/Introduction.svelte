@@ -191,4 +191,30 @@
     display: flex;
     justify-content: center;
   }
+
+  // Phone and tablet
+  @media screen and (max-width: 1023px) {
+    //.root :global(.typewriter-container > p) {
+    //  line-height: 80px;
+    //}
+
+    .name {
+      font-size: calc(2.5 * var(--font-size));
+
+      &.is-writing-name {
+        position: relative;
+        top: -23px;
+      }
+    }
+
+    .headline {
+      font-size: calc(1.75 * var(--font-size));
+      line-height: 40px;
+      margin-top: calc(0.25 * var(--spacing-unit));
+    }
+
+    .intro {
+      margin-top: calc(1 * var(--spacing-unit));
+    }
+  }
 </style>
