@@ -57,21 +57,23 @@
                   <div
                     slot="preview"
                     style={matches1400
-                      ? "position: relative; left: 100px;"
+                      ? "position: relative; left: 600px; margin-left: -450px;"
+                      : matches1250
+                      ? "position: relative; left: 400px; margin-left: -350px;"
                       : "margin-top: 50px;"}
                   >
                     <MacbookPreviewImage
                       width={matches1400
-                        ? 550
+                        ? 900
                         : matches1250
-                        ? 450
+                        ? 750
                         : matches1000
-                        ? 600
+                        ? 800
                         : matches800
-                        ? 400
+                        ? 600
                         : matches600
-                        ? 350
-                        : 250}
+                        ? 450
+                        : 325}
                       previewSrc={aspSystemPreview}
                     />
                   </div>
