@@ -3,10 +3,12 @@
   import GitHub from "./icons/GitHub.svelte";
 
   import { fly } from "svelte/transition";
-  import { onMount } from "svelte";
+  import { createEventDispatcher, onMount } from "svelte";
   import { cubicInOut } from "svelte/easing";
   import Headroom from "./components/Headroom.svelte";
   import Hamburger from "./icons/Hamburger.svelte";
+
+  const dispatch = createEventDispatcher();
 
   export let transitionDelay: number = 0;
 
@@ -36,6 +38,10 @@
       behavior: "smooth",
     });
   }
+
+  function handleHamburgerTapped() {
+    dispatch("mobileNavOpen");
+  }
 </script>
 
 <svelte:window bind:scrollY />
@@ -57,11 +63,13 @@
             duration: 500,
             easing: cubicInOut,
           }}
+          on:click={handleHamburgerTapped}
         >
           <Hamburger width="30" height="30" fill="#fff" />
         </div>
         <ul>
           <li
+            class="bar-nav"
             in:fly={{
               y: -50,
               duration: 500,

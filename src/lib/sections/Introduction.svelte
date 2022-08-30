@@ -83,7 +83,7 @@
           <p
             class="intro"
             in:fly={{
-              y: 50,
+              y: 20,
               duration: 500,
               easing: cubicInOut,
               delay: introDelay,
@@ -96,7 +96,7 @@
           <p
             class="intro-2"
             in:fly={{
-              y: 50,
+              y: 20,
               duration: 500,
               easing: cubicInOut,
               delay: intro2Delay,
@@ -199,7 +199,9 @@
     //}
 
     .root {
-      justify-content: inherit;
+      //justify-content: inherit;
+      //min-height: inherit;
+      //padding-bottom: calc(2 * var(--spacing-unit));
     }
 
     .container {
@@ -211,7 +213,7 @@
 
       &.is-writing-name {
         position: relative;
-        top: -20px;
+        top: -17px;
       }
     }
 
