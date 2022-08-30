@@ -97,7 +97,7 @@
       display: flex;
       flex: 1;
       align-items: flex-end;
-      padding-bottom: calc(3 * var(--spacing-unit));
+      padding-bottom: calc(7 * var(--spacing-unit));
     }
 
     .icons > ul {

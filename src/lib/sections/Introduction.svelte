@@ -19,7 +19,7 @@
 
   $: preDelay = transitionDelay;
   $: nameDelay = preDelay + 300;
-  $: headlineDelay = nameDelay + 2200;
+  $: headlineDelay = nameDelay + 1750;
   $: introDelay = headlineDelay + 750;
   $: intro2Delay = introDelay + 750;
 
@@ -60,9 +60,10 @@
             class:is-writing-name={!isDoneTypingName}
             in:fade={{ duration: 300, easing: cubicInOut, delay: nameDelay }}
           >
+            <!--              interval={[70, 110, 80]}-->
             <Typewriter
               delay={nameDelay + 500}
-              interval={[70, 110, 80]}
+              interval={[50, 70, 60]}
               cascade
               on:done={() => (isDoneTypingName = true)}
             >
@@ -199,9 +200,8 @@
     //}
 
     .root {
-      //justify-content: inherit;
-      //min-height: inherit;
-      //padding-bottom: calc(2 * var(--spacing-unit));
+      justify-content: inherit;
+      padding-top: calc(1 * var(--spacing-unit));
     }
 
     .container {
