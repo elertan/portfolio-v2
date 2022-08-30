@@ -53,6 +53,10 @@
                       React and Node.js, and all of the code was written in
                       Typescript.
                     </p>
+                    <p class="redacted-notice">
+                      Note: some information shown within the image is redacted
+                      by black bars to prevent the publicity of private data.
+                    </p>
                   </div>
                   <div
                     slot="preview"
@@ -164,6 +168,12 @@
 
   .divider-space {
     padding-top: calc(1 * var(--spacing-unit));
+  }
+
+  .redacted-notice {
+    margin-top: calc(2 * var(--spacing-unit)) !important;
+    color: var(--color-text-muted);
+    font-size: calc(0.8 * var(--font-size)) !important;
   }
 
   .other-projects {
