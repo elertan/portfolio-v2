@@ -11,6 +11,7 @@
     padding: calc(1.5 * var(--spacing-unit));
     text-align: center;
     font-size: calc(0.75 * var(--font-size));
-    //color: var(--color-text-muted);
+    color: var(--color-text-muted);
+    //background-color: var(--color-dark);
   }
 </style>

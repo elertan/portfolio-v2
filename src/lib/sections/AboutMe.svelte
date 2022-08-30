@@ -57,8 +57,9 @@
             </ul>
           </div>
         </div>
-        <div>
-          <img src={me} alt="Photo of Dennis Kievits" />
+
+        <div class="photo-container">
+          <img src={me} alt="Dennis Kievits" />
         </div>
       </div>
     </Container>
@@ -82,6 +83,8 @@
 
   .content {
     padding-bottom: calc(5 * var(--spacing-unit));
+    width: 100%;
+    flex: 1;
   }
 
   p {
@@ -113,12 +116,44 @@
     }
   }
 
-  img {
-    width: 525px;
-    //height: 600px;
-    position: relative;
-    top: 5px;
-    left: 80px;
-    margin-top: -50px;
+  .photo-container {
+    display: flex;
+    align-items: end;
+
+    img {
+      width: 525px;
+      //height: 600px;
+      position: relative;
+      //top: 5px;
+      left: 80px;
+      margin-top: -50px;
+      max-width: 525px;
+    }
+  }
+
+  // Desktop
+  @media screen and (min-width: 1024px) {
+  }
+
+  // Phone and Tablet
+  @media screen and (max-width: 1023px) {
+    .layout {
+      flex-direction: column;
+    }
+
+    .content {
+      padding-bottom: 0;
+    }
+
+    .photo-container {
+      align-items: center;
+      justify-content: center;
+
+      img {
+        left: 0;
+        width: 80%;
+        margin-top: 0;
+      }
+    }
   }
 </style>
