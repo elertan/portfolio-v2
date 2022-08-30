@@ -5,7 +5,7 @@
   import SectionTitle from "../components/SectionTitle.svelte";
   import Section from "../components/Section.svelte";
 
-  import me from "../../assets/images/me.png";
+  import me from "../../assets/images/me.webp";
   import thesisSrc from "../../assets/documents/thesis.pdf";
   // import { onMount } from "svelte";
 

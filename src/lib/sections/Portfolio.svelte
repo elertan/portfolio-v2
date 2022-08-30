@@ -6,8 +6,8 @@
     EPreviewPosition,
   } from "./portfolio/PortfolioItem.svelte";
   import MacbookPreviewImage from "../components/MacbookPreviewImage.svelte";
-  import aspSystemPreview from "../../assets/images/asp-system-preview.png";
-  import fuifPreview from "../../assets/images/fuif-preview.png";
+  import aspSystemPreview from "../../assets/images/asp-system-preview.webp";
+  import fuifPreview from "../../assets/images/fuif-preview.webp";
   import MediaQuery from "../MediaQuery.svelte";
 
   import { fly, fade } from "svelte/transition";
